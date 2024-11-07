@@ -1,10 +1,37 @@
 package domain;
 
-public class NeuroMuscularSymptom extends Symptom{
+public class NeuroMuscularSymptom implements Symptom{
+
+	private String name;
+	private int covidImpact;
+	private int severityIndex;
 
 	public NeuroMuscularSymptom(String name, int covidImpact, int severityIndex) {
-		super(name, covidImpact, severityIndex);
-		// TODO Auto-generated constructor stub
+		this.name = name;
+		this.covidImpact = covidImpact;
+		this.severityIndex = severityIndex;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getCovidImpact() {
+		return covidImpact;
+	}
+	public void setCovidImpact(int covidImpact) {
+		this.covidImpact = covidImpact;
+	}
+	public int getSeverityIndex() {
+		return severityIndex;
+	}
+	public void setSeverityIndex(int severityIndex) {
+		this.severityIndex = severityIndex;
+	}
+	@Override
+	public String toString() {
+		return name;
 	}
 
 }
